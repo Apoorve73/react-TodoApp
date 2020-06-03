@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../bootstrap/css/bootstrap.css'
+import PropTypes from 'prop-types';
 
 export class AddTodo extends Component {
     state = {
@@ -25,7 +26,7 @@ export class AddTodo extends Component {
                 aria-describedby="inputGroup-sizing-lg"
                 type="text" 
                 name="title" 
-                placeholder="Add a Todo..."
+                placeholder="Add a Todo...(It may take a few seconds to update/delete the Todos)"
                 value = {this.state.title}
                 onChange={this.onChange}
                 />
@@ -38,5 +39,7 @@ export class AddTodo extends Component {
         )
     }
 }
-
+AddTodo.propTypes = {
+    addTodo: PropTypes.func.isRequired 
+}
 export default AddTodo
