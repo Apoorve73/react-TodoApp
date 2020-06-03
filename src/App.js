@@ -21,7 +21,7 @@ class App extends Component{
         todos: [{
           id: uuid(),
           title: "Example Todo",
-          completed: "false"
+          completed: "true"
         }
         ]
     }
